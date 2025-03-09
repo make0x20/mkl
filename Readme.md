@@ -11,7 +11,7 @@ Mookie launcher allows you to specify a menu structure in JSON format and execut
 With Go installed:
 
 ```bash
-go install github.com/make0x20/mookie-launcher
+go install github.com/make0x20/mkl@latest
 ```
 
 Optionally create a menu.json inside `~/config/mookie-launcher`. Example menu:
