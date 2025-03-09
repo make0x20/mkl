@@ -18,14 +18,14 @@ Optionally create a menu.json inside `~/config/mookie-launcher`. Example menu:
 
 ```json
 {
-    "List directory": "ls -alh",
-    "Code editor": "nvim",
-    "System - submenu": {
-      "Update system": "sudo pacman -Syu",
-	  "Disk usage": "df -h"
-    },
-    "Some bash script": "~/path/some-script.sh",
-	"System monitor": "htop"
+  "List directory": "ls -alh",
+  "Code editor": "nvim",
+  "System - submenu": {
+    "Update system": "sudo pacman -Syu",
+    "Disk usage": "df -h"
+  },
+  "Some bash script": "~/path/some-script.sh",
+  "System monitor": "htop"
 }
 ```
 
@@ -44,3 +44,5 @@ mkl -n <menu name>
 # print the selected command to stdout instead of executing it - useful for piping to other commands
 mkl -p
 ```
+
+Search through entries using / - courtesy of [huh](https://github.com/charmbracelet/huh).
