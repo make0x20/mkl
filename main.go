@@ -3,10 +3,10 @@ package main
 import (
 	"fmt"
 	"log"
-	"mkl/cmdrunner"
-	"mkl/config"
-	"mkl/menu"
-	"mkl/ui"
+	"github.com/make0x20/mkl/cmdrunner"
+	"github.com/make0x20/mkl/config"
+	"github.com/make0x20/mkl/menu"
+	"github.com/make0x20/mkl/ui"
 )
 
 func main() {

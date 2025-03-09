@@ -1,4 +1,4 @@
-module mkl
+module github.com/make0x20/mkl
 
 go 1.24.0
 

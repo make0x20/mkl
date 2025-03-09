@@ -2,7 +2,7 @@ package ui
 
 import (
 	"github.com/charmbracelet/huh"
-	"mkl/menu"
+	"github.com/make0x20/mkl/menu"
 	"sort"
 )
 
