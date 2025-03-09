@@ -2,6 +2,8 @@
 
 A simple cli menu tool to launch a set of predefined commands.
 
+![mkl gif](img/mkl.gif)
+
 Mookie launcher allows you to specify a menu structure in JSON format and execute the selected command. It can be useful for quickly launching hard to remember oneliners, bash scripts, programs, etc.
 
 ## Installation
