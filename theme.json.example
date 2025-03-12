@@ -1,0 +1,25 @@
+{
+  "base_foreground": "#FFFFFF",
+  "base_background": "",
+  "base_bold": false,
+
+  "title_foreground": "#FF0053",
+  "title_background": "",
+  "title_bold": true,
+  "title_separator": "double",
+
+  "option_foreground": "#00BDED",
+  "option_background": "",
+  "option_bold": false,
+
+  "selected_foreground": "#00BDED",
+  "selected_background": "#000000",
+  "selected_bold": true,
+
+  "selector_foreground": "#000000",
+  "selector_background": "#FF0053",
+  "selector_bold": true,
+  "selector_string": "❯ ",
+
+  "submenu_pointer": " ❯"
+}

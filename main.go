@@ -1,12 +1,13 @@
 package main
 
 import (
+	"errors"
 	"fmt"
-	"log"
 	"github.com/make0x20/mkl/cmdrunner"
 	"github.com/make0x20/mkl/config"
 	"github.com/make0x20/mkl/menu"
-	"github.com/make0x20/mkl/ui"
+	"log"
+	"os"
 )
 
 func main() {
@@ -19,14 +20,26 @@ func main() {
 		log.Fatal(err)
 	}
 
+	// Read and parse theme file
+	themeBytes, err := menu.ReadThemeFile(cfg.ThemeFile)
+	if err != nil && !errors.Is(err, os.ErrNotExist) {
+		log.Fatal(err)
+	}
+
 	// Parse menu data
-	m, err := menu.ParseMenu(menuBytes)
+	m, err := menu.NewMenu(menuBytes)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	// Parse theme data
+	theme, err := menu.NewThemeConfig(string(themeBytes))
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	// Navigate menu and get selected command
-	cmd, err := ui.NavigateMenu(cfg.MenuTitle, m.Items)
+	cmd, err := m.Render(cfg.MenuTitle, theme)
 	if err != nil {
 		log.Fatal(err)
 	}

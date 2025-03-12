@@ -28,8 +28,8 @@ func ReadMenuFile(file string) ([]byte, error) {
 	return menuData, nil
 }
 
-// ParseMenu parses a menu byte slice into a Menu struct
-func ParseMenu(data []byte) (*Menu, error) {
+// NewMenu parses a menu byte slice and returns a new Menu
+func NewMenu(data []byte) (*Menu, error) {
 	if len(data) == 0 {
 		return nil, fmt.Errorf("empty menu data")
 	}
@@ -52,6 +52,11 @@ func ParseMenu(data []byte) (*Menu, error) {
 	}
 
 	return menu, nil
+}
+
+// Render renders the menu and returns the selected command
+func (m *Menu) Render(title string, tc ThemeConfig) (string, error) {
+	return renderMenu(title, m.Items, tc)
 }
 
 // parseMenuItem parses a raw JSON message into a MenuItem
@@ -88,4 +93,3 @@ func parseMenuItem(name string, data json.RawMessage) (*MenuItem, error) {
 
 	return submenu, nil
 }
-
