@@ -8,17 +8,61 @@ Mookie launcher allows you to specify a menu structure in JSON format and execut
 
 ## Installation
 
-### With AUR:
+### Install from Arch Linux AUR:
 
 ```bash
 yay -S mkl-bin
 ```
 
-With Go:
+### With Go:
 
 ```bash
 go install github.com/make0x20/mkl@latest
 ```
+
+### Install latest version using curl:
+
+#### Linux:
+
+```bash
+# 64-bit
+curl -sSL "https://github.com/make0x20/mkl/releases/latest/download/mkl_linux_amd64" -o mkl && chmod +x mkl && sudo mv mkl /usr/local/bin/
+
+# 32-bit
+cudl -sSL "https://github.com/make0x20/mkl/releases/latest/download/mkl_linux_386" -o mkl && chmod +x mkl && sudo mv mkl /usr/local/bin/
+```
+
+#### MacOS:
+
+```bash
+curl -sSL "https://github.com/make0x20/mkl/releases/latest/download/mkl_darwin_amd64" -o mkl && chmod +x mkl && sudo mv mkl /usr/local/bin/
+```
+
+#### Raspberry Pi:
+
+```bash
+# 64-bit
+curl -sSL "https://github.com/make0x20/mkl/releases/latest/download/mkl_linux_armv6" -o mkl && chmod +x mkl && sudo mv mkl /usr/local/bin/
+```
+
+#### FreeBSD:
+
+```bash
+# 64-bit
+curl -sSL "https://github.com/make0x20/mkl/releases/latest/download/mkl_freebsd_amd64" -o mkl && chmod +x mkl && sudo mv mkl /usr/local/bin/
+```
+
+#### OpenBSD:
+
+```bash
+# 64-bit
+curl -sSL "https://github.com/make0x20/mkl/releases/latest/download/mkl_openbsd_amd64" -o mkl && chmod +x mkl && sudo mv mkl /usr/local/bin/
+```
+
+#### Windows
+
+I have no idea honestly. Something along the lines of download `mkl_windows_amd64.exe` from the [Releases](https://github.com/make0x20/mkl/releases) page, rename it to `mkl.exe` and put it in your PATH.
+
 
 ## Create a menu
 
