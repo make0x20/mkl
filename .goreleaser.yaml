@@ -13,7 +13,6 @@ builds:
       - darwin
       - freebsd
       - openbsd
-      - netbsd
     goarch:
       - amd64
       - 386
@@ -23,6 +22,16 @@ builds:
         goarch: 386
       - goos: windows
         goarch: 386
+      - goos: windows
+        goarch: arm
+      - goos: freebsd
+        goarch: 386
+      - goos: freebsd
+        goarch: arm
+      - goos: openbsd
+        goarch: 386
+      - goos: openbsd
+        goarch: arm
     binary: mkl
     main: main.go
 
@@ -37,7 +46,25 @@ changelog:
       - "^docs:"
       - "^test:"
 
+aurs:
+  - name: mkl-bin
+    homepage: "https://github.com/make0x20/mkl"
+    description: "Mookie Launcher - A terminal command launcher menu"
+    maintainers:
+      - "make0x20"
+    license: "GPL-3.0"
+    private_key: "{{ .Env.AUR_KEY }}"
+    git_url: "ssh://aur@aur.archlinux.org/mkl-bin.git"
+    provides:
+      - mkl
+    conflicts:
+      - mkl
+    package: |-
+      install -Dm755 "${srcdir}/mkl-bin_${pkgver}_x86_64.binary" "${pkgdir}/usr/bin/mkl"
+
 release:
   footer: |
     Mookie Launcher is a free and open-source software licensed under the GPL-3.0 license. 
     Binaries built with [Goreleaser](https://goreleaser.com).
+
+    Hope you enjoy it :)

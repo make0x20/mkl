@@ -8,7 +8,13 @@ Mookie launcher allows you to specify a menu structure in JSON format and execut
 
 ## Installation
 
-With Go installed:
+### With AUR:
+
+```bash
+yay -S mkl-bin
+```
+
+With Go:
 
 ```bash
 go install github.com/make0x20/mkl@latest
