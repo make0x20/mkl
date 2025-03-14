@@ -35,7 +35,11 @@ cudl -sSL "https://github.com/make0x20/mkl/releases/latest/download/mkl_linux_38
 #### MacOS:
 
 ```bash
+# ARM CPUs
 curl -sSL "https://github.com/make0x20/mkl/releases/latest/download/mkl_darwin_amd64" -o mkl && chmod +x mkl && sudo mv mkl /usr/local/bin/
+
+# Intel CPUs
+curl -sSL "https://github.com/make0x20/mkl/releases/download/v0.2.2/mkl_darwin_arm64" -o mkl && chmod +x mkl && sudo mv mkl /usr/local/bin/
 ```
 
 #### Raspberry Pi:
