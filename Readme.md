@@ -29,7 +29,7 @@ go install github.com/make0x20/mkl@latest
 curl -sSL "https://github.com/make0x20/mkl/releases/latest/download/mkl_linux_amd64" -o mkl && chmod +x mkl && sudo mv mkl /usr/local/bin/
 
 # 32-bit
-cudl -sSL "https://github.com/make0x20/mkl/releases/latest/download/mkl_linux_386" -o mkl && chmod +x mkl && sudo mv mkl /usr/local/bin/
+curl -sSL "https://github.com/make0x20/mkl/releases/latest/download/mkl_linux_386" -o mkl && chmod +x mkl && sudo mv mkl /usr/local/bin/
 ```
 
 #### MacOS:
@@ -65,12 +65,12 @@ curl -sSL "https://github.com/make0x20/mkl/releases/latest/download/mkl_openbsd_
 
 #### Windows
 
-I have no idea honestly. Something along the lines of download `mkl_windows_amd64.exe` from the [Releases](https://github.com/make0x20/mkl/releases) page, rename it to `mkl.exe` and put it in your PATH.
+I have no idea honestly. Something along the lines of downloading `mkl_windows_amd64.exe` from the [Releases](https://github.com/make0x20/mkl/releases) page, renaming it to `mkl.exe` and putting it in your PATH.
 
 
 ## Create a menu
 
-Create a menu.json inside `~/config/mookie-launcher` (or pass a sustom path using `-m /path/to/menu.json`). Example menu:
+Create a menu.json inside `~/.config/mookielauncher` (or pass a custom path using `-m /path/to/menu.json`). Example menu:
 
 ```json
 {
@@ -98,7 +98,7 @@ Create a menu.json inside `~/config/mookie-launcher` (or pass a sustom path usin
 
 ## Theming
 
-You can customize the colors of the menu by creating a `theme.json` file inside `~/config/mookie-launcher` (or pass a custom path using `-t /path/to/theme.json`). Example theme with all possible parameters:
+You can customize the colors of the menu by creating a `theme.json` file inside `~/.config/mookielauncher` (or pass a custom path using `-t /path/to/theme.json`). Example theme with all possible parameters:
 
 ```json
 
@@ -130,10 +130,12 @@ You can customize the colors of the menu by creating a `theme.json` file inside 
 
 ```
 
+`title_separator` options are: `normal`, `thick`, `double`, `block`, `block_outer`, `block_inner`.
+
 ## Usage
 
 ```bash
-# simple usage - will look for menu.json and theme.json inside ~/config/mookie-launcher
+# simple usage - will look for menu.json and theme.json inside ~/.config/mookielauncher
 mkl
 
 # specify a menu file
